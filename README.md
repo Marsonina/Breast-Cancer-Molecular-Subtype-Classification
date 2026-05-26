@@ -1,10 +1,4 @@
-# AN2DL Challenge 2 — Breast Cancer Molecular Subtype Classification
-
-**Artificial Neural Networks and Deep Learning** — Politecnico di Milano, A.Y. 2025/2026
-
-*Team S.O.S.: Silivia Ferrara, Samuele Forner, Oscar Repetto*
-
----
+Breast Cancer Molecular Subtype Classification
 
 ## Problem Overview
 
