@@ -1,0 +1,42 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Model weights
+*.pt
+*.pth
+*.ckpt
+models/
+
+# Data
+*.csv
+*.npy
+*.npz
+submissions/
+
+# Logs
+*.log
+runs/
+wandb/
+
+# IDE
+.vscode/
+.idea/
