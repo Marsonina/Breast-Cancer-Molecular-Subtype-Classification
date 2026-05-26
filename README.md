@@ -85,8 +85,6 @@ Optimizers tested: **Adam**, **AdamW**, **Ranger**, **Lion**.
 │   ├── efficientnet_b4_380.ipynb
 │   ├── parallel_path_cnn.ipynb
 │   └── wideresnet50.ipynb
-├── report/
-│   └── AN2DL_Challenge2.pdf
 └── README.md
 ```
 
