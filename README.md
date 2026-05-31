@@ -23,8 +23,6 @@ Each sample consists of an RGB tissue image paired with a binary mask highlighti
 
 ### Key Challenges
 
-- Presence of **Shrek-like artifacts** mislabeled as tissue classes
-- **Artificially added boogers** (green blobs) highlighted by masks as high-importance regions
 - **Duplicate patches** of the same tissue within single images
 - Large areas devoid of informative content
 - Marker traces on images
@@ -33,12 +31,7 @@ Each sample consists of an RGB tissue image paired with a binary mask highlighti
 
 ## Approach
 
-### 1. Data Cleaning
-
-- **Shrek removal**: similarity-based filtering using a pretrained InceptionV3; manual inspection was required to avoid discarding scarce tissue samples
-- **Booger filtering**: HSV color-space analysis to identify and remove images containing artificial green blobs (density threshold on the H∈[35,60], S∈[80,255], V∈[160,255] range)
-
-### 2. Preprocessing & Patching
+### 1. Preprocessing & Patching
 
 To handle the high-resolution images (1024 px) without losing fine-grained detail, a **mask-guided patching** strategy was adopted:
 
@@ -49,13 +42,13 @@ To handle the high-resolution images (1024 px) without losing fine-grained detai
 
 This ensures extracted patches are predominantly informative tissue regions.
 
-### 3. Data Augmentation
+### 2. Data Augmentation
 
 - Random horizontal and vertical flips
 - Slight random rotations (±4°)
 - Class oversampling to address label imbalance
 
-### 4. Architectures Explored
+### 3. Architectures Explored
 
 All models were trained with a **Multiple Instance Learning (MIL)** pooling strategy: patches from the same image share a label, and patch-level logits are averaged before computing the loss.
 
